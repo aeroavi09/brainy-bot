@@ -26,7 +26,7 @@ async function question() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': '' // Replace with your OpenAI API key
+          'Authorization': $os.getenv("TEST_1") // Replace with your OpenAI API key
         },
         body: JSON.stringify({
           temperature: 0.7,
@@ -66,7 +66,7 @@ async function question() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': '' // Replace with your OpenAI API key
+          'Authorization': '$os.getenv("TEST_1")' // Replace with your OpenAI API key
         },
         body: JSON.stringify({
           temperature: 0.7,
