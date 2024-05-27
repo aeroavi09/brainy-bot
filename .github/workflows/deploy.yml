@@ -20,6 +20,10 @@ jobs:
           cp ./study.html publish_dir/study.html
           cp ./study.css publish_dir/study.css
 
+      - name: check the secrets
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
+        run: echo "$API_KEY"
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
@@ -28,5 +32,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: publish_dir  # Root directory containing index.html and other static files
-
-
+      
