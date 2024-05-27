@@ -1,3 +1,10 @@
+const apiKey = process.env.API_KEY;
+
+if (!apiKey) {
+  console.error('API_KEY is not defined!');
+  process.exit(1);
+}
+
 async function question() {
   document.getElementById('question').innerText = 'loading..';
   document.getElementById('check').innerHTML = '';
@@ -26,7 +33,7 @@ async function question() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer '+ $API_KEY // Replace with your OpenAI API key
+          'Authorization': 'Bearer ${apiKey}' // Replace with your OpenAI API key
         },
         body: JSON.stringify({
           temperature: 0.7,
@@ -66,7 +73,7 @@ async function question() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer '+ $API_KEY // Replace with your OpenAI API key
+          'Authorization': 'Bearer ${apiKey}' // Replace with your OpenAI API key
         },
         body: JSON.stringify({
           temperature: 0.7,
@@ -77,7 +84,7 @@ async function question() {
       });
   
       if (!response.ok) {
-        console.log(response.error)
+        console.log(response.error
         throw new Error('Failed to fetch response from OpenAI API');
       }
   
