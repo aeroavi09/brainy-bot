@@ -1,4 +1,4 @@
-const apiKey = process.env.API_KEY;
+const apiKey = $API_KEY;
 //testing
 if (!apiKey) {
   console.error('API_KEY is not defined!');
