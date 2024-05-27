@@ -13,12 +13,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Copy JavaScript file and index and css to publish_dir
-        run: |
-          mkdir -p publish_dir  # Ensure publish_dir exists
-          cp ./study.js publish_dir/study.js  
-          cp ./study.html publish_dir/study.html
-          cp ./study.css publish_dir/study.css
+      # - name: Copy JavaScript file and index and css to publish_dir
+      #   run: |
+      #     mkdir -p publish_dir  # Ensure publish_dir exists
+      #     cp ./study.js publish_dir/study.js  
+      #     cp ./study.html publish_dir/study.html
+      #     cp ./study.css publish_dir/study.css
 
 
       - name: Deploy to GitHub Pages
