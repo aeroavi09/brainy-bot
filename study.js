@@ -33,7 +33,7 @@ async function question() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer ${apiKey}' // Replace with your OpenAI API key
+          'Authorization': 'Bearer '+ apiKey  //  Replace with your OpenAI API key
         },
         body: JSON.stringify({
           temperature: 0.7,
@@ -73,7 +73,7 @@ async function question() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer ${apiKey}' // Replace with your OpenAI API key
+          'Authorization': 'Bearer '+ apiKey // Replace with your OpenAI API key
         },
         body: JSON.stringify({
           temperature: 0.7,
