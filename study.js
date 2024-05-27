@@ -84,7 +84,7 @@ async function question() {
       });
   
       if (!response.ok) {
-        console.log(response.error
+        console.log(response.error);
         throw new Error('Failed to fetch response from OpenAI API');
       }
   
