@@ -1,8 +1,12 @@
 const apiKey = "$API_KEY";
 //testing
+if (apiKey){
+  console.log("apiKey = " + apiKey);
+}
 if (!apiKey) {
   console.error('API_KEY is not defined!');
   process.exit(1);
+
 }
 
 async function question() {
@@ -44,7 +48,7 @@ async function question() {
       });
   
       if (!response.ok) {
-        console.log(response.error)
+        console.log(response.error);
         throw new Error('Failed to fetch response from OpenAI API');
       }
   
