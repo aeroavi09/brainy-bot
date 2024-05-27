@@ -1,5 +1,5 @@
 const apiKey = process.env.API_KEY;
-
+//testing
 if (!apiKey) {
   console.error('API_KEY is not defined!');
   process.exit(1);
