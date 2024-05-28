@@ -1,4 +1,4 @@
-
+console.log("here is the value : " + localStorage.getItem('Key'));
   async function question() {
   document.getElementById('question').innerText = 'loading..';
   document.getElementById('check').innerHTML = '';
