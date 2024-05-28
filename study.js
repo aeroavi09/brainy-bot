@@ -1,4 +1,5 @@
-async function question() {
+key = localStorage.getItem('Key');
+  async function question() {
   document.getElementById('question').innerText = 'loading..';
   document.getElementById('check').innerHTML = '';
   if(document.querySelector('#answerArea')){
@@ -26,7 +27,7 @@ async function question() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer '+ $API_KEY // Replace with your OpenAI API key
+          'Authorization': 'Bearer '+ key // Replace with your OpenAI API key
         },
         body: JSON.stringify({
           temperature: 0.7,
@@ -66,7 +67,7 @@ async function question() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer '+ $API_KEY // Replace with your OpenAI API key
+          'Authorization': 'Bearer '+ key // Replace with your OpenAI API key
         },
         body: JSON.stringify({
           temperature: 0.7,
