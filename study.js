@@ -48,7 +48,7 @@ console.log("here is the value : " + test );
   
       document.getElementById('question').innerText = generatedText;
     } catch (error) {
-      console.error('Error:', error);
+      console.log('Error:', error);
       document.getElementById('question').innerText = 'Error generating text. Please try again later.';
     }
     document.getElementById('questionDiv').appendChild(newTextArea);
