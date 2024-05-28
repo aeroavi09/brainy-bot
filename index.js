@@ -1,5 +1,5 @@
 localStorage.clear();
-
+localStorage.setItem('Key', 'sk-proj-l9LxuGZAK33OzA9sDHCmT3BlbkFJmPr9eSOztYTzGoem8AD1')
 function nextPage(){
     grade = document.getElementById('gradeInput').value;
     if (grade === "")
